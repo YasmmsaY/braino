@@ -68,7 +68,7 @@ onInputChange = (event) => {
 
 onButtonSubmit = () => {
   this.setState({ imageUrl: this.state.input });
-      fetch('http://localhost:3000/imageUrl', {
+      fetch('https://murmuring-fortress-56623.herokuapp.com/imageUrl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -79,7 +79,7 @@ onButtonSubmit = () => {
       .then(response => {
         console.log('hi', response)
         if (response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://murmuring-fortress-56623.herokuapp.com:3000/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
