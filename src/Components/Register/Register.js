@@ -22,7 +22,7 @@ class Register extends React.Component {
     this.setState({password: event.target.value})
   }
 
-  onSubmitSignIn = () => {
+onSubmitSignIn = () => {
     fetch('https://murmuring-fortress-56623.herokuapp.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
@@ -39,8 +39,8 @@ class Register extends React.Component {
           this.props.onRouteChange('home');
         }
       })
-      .catch(err=>{console.log(err)})
   }
+  
 
   render() {
     return (
